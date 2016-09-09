@@ -1,0 +1,28 @@
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="http://www.catb.org/hacker-emblem/glider-small.png">
+</head>
+<body>
+<h1>Hello world</h1>
+<script>
+function setFavicon() {
+    var link = document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = 'https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon5.ico';
+    document.getElementsByTagName('head')[0].appendChild(link);
+}
+
+function setTitle() {
+    document.title = 'Gmail';
+}
+
+function setContent() {
+    document.getElementsByTagName('body')[0].innerHTML = '<img src="/gmail.png">';
+}
+
+setTimeout(function () {
+    setFavicon();
+    setTitle();
+    setContent();
+}, 10000);
+</script>
